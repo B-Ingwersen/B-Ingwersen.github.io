@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body, html {
+            height: 100%;
+            color: #777;
+            line-height: 1.8;
+        }
+
+        /* Create a Parallax Effect */
+        .bgimg {
+            background-attachment: fixed;
+            background-position: center;
+            background-position-y: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* First image (Logo. Full height) */
+        .bgimg {
+            background-image: url('photos/codeskew.png');
+        }
+
+        .disable-w3-li {
+            padding: 0;
+            border-bottom: none;
+        }
+
+        .w3-wide {letter-spacing: 10px;}
+        .w3-hover-opacity {cursor: pointer;}
+
+        /* Turn off parallax scrolling for tablets and phones */
+        @media only screen and (max-device-width: 1600px) {
+            .bgimg {
+                background-attachment: scroll;
+                min-height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar" id="myNavbar">
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large" href="javascript:void(0);" onclick="toggleFunction('mySidebar')" title="Toggle Navigation Menu">
+            <i class="fa fa-bars"></i>
+            </a>
+            <a href="../index.html" class="w3-bar-item w3-button w3-hide-small" style="color: black">HOME</a>
+            <a href="../about/index.html" class="w3-bar-item w3-button w3-hide-small" style="color: black"><i class="fa fa-user"></i> ABOUT</a>
+            <a href="../projects/index.html" class="w3-bar-item w3-button w3-hide-small" style="color: black"><i class="fa fa-th"></i> PROJECTS</a>
+            <a href="../contact/index.html" class="w3-bar-item w3-button w3-hide-small" style="color: black"><i class="fa fa-envelope"></i> CONTACT</a>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="mySidebar" class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-hide w3-hide-large w3-hide-medium">
+            <a href="../index.html" class="w3-bar-item w3-button" onclick="toggleFunction('mySidebar')">HOME</a>
+            <a href="../about/index.html" class="w3-bar-item w3-button" onclick="toggleFunction('mySidebar')">ABOUT</a>
+            <a href="../projects/index.html" class="w3-bar-item w3-button" onclick="toggleFunction('mySidebar')">PROJECTS</a>
+            <a href="../contact/index.html" class="w3-bar-item w3-button" onclick="toggleFunction('mySidebar')">CONTACT</a>
+        </div>
+    </div>
+
+    <div class="w3-container w3-padding-64 w3-light-grey">
+        <div class="w3-content">
+            <h3 style="color: grey;">Bryan Ingwersen</h3>
+            <h1>About</h1>
+
+            <div class="w3-card w3-white w3-padding">
+                <p>
+                    I am a current first year student at the University of Notre Dame planning to major in Computer Science and/or Applied and Computational Statistics and Mathematics (AMCS). I am highly self motivated and curious about problem solving. Besides my core passions, I'm interested in areas ranging from music to politics, and I seeks out problems or ideas that link these topics together.
+                </p>
+                <p>
+                    Over time, I've tinkered with a lot of ideas, and my curiosity sometimes grows into extended experiments. I've independently learned most of my programming knowledge in order to pursue these projects. My primary languages are C/C++ and Python, although I've also branched out into HTML, CSS, JavaScript, PHP, SQL, and x86 Assembly. I've put some of my larger work under the <a href="../projects/index.html">Projects</a> tab where you can also find links to the source code on Github.
+                </p>
+            </div>
+
+            <h4 class="w3-center">EXPERIENCES</h4>
+            <div class="w3-card w3-white w3-ul">
+                <li class="w3-row w3-animate-opacity" style="padding: 0; width:100%">
+                    <div class="w3-padding">
+                        <h3>
+                            Computation Fluid Dynamics Research Project
+                        </h3>
+                        <p>
+                            Over my Junior and Senior years in high school, I worked on an independent science project looking into how to better predict the formation of turbulence with fluids. While fluids behavior is governed by equations discovered over a century ago, I was fascinated by how difficult it still is to understand turbulence. After reading a paper about a laboratory technique that significantly simplified this problem, I looked at whether computer simulations could be used in the same way to speed up this type of research. Eventually, I created a custom fluid simulation in C++ and conducted hundreds of trials. Most of the results were ultimately inconclusive, but the technique showed potential if used with more computational resources. The project was presented at the CT STEM and CT Science and Engineering Fairs and recieved a number of awards and honors. 
+                        </p>
+                    </div>
+                </li>
+                <li class="w3-row w3-animate-opacity" style="padding: 0; width:100%">
+                    <div class="w3-padding">
+                        <h3>
+                            Eagle Project
+                        </h3>
+                        <p>
+                            I was a Boy Scout for over 6 years and completed my Eagle project and the Eagle rank in 2018. The project involved clearing a large, overgrown garden at a local school and putting in new design that is much easier to maintain. It involved gathering over a thousand dollars in material donations and 140 volunteer hours to complete.
+                        </p>
+                    </div>
+                </li>
+                <li class="w3-row w3-animate-opacity" style="padding: 0; width:100%">
+                    <div class="w3-padding">
+                        <h3>
+                            Science Bowl Website
+                        </h3>
+                        <p>
+                            My high school science bowl team wanted a way to track their performance in practices so that they could understand they could identify what topics they needed to focus on. I developed and maintained a basic website for the club for meeting this need. The site provided an easy interface for recording practices and seeing both team and individual analysis. To learn more about the website, check out its <a href="../projects/scibowl/index.html">projects page</a>.
+                        </p>
+                    </div>
+                </li>
+                <li class="w3-row w3-animate-opacity" style="padding: 0; width:100%">
+                    <div class="w3-padding">
+                        <h3>
+                            Carleton Summer Computer Science Institute
+                        </h3>
+                        <p>
+                            In the summer of 2018, I did a 3-week computer science program at Carleton College. During this, I got exposure to digital music creation, robots, and computer vision with OpenCV. As a part of the program, I worked with a partner on a small research project where we ultimately made device that automatically generated songs. The device allowed human interaction for changing the volume, tempo, and style of the music.
+                        </p>
+                    </div>
+                </li>
+                <li class="w3-row w3-animate-opacity" style="padding: 0; width:100%">
+                    <div class="w3-padding">
+                        <h3>
+                            Music
+                        </h3>
+                        <p>
+                            I deeply enjoy listening to and making music, and I've played the trumpet for 8 years. During high school, I was part of my school's wind ensemble and jazz band, and I participated in the Connecticut All-State Music Festival four times. Other work I've done includes playing taps for Veteran's Day events and taking part in the pit orchestra for a community theatre production.
+                        </p>
+                    </div>
+                </li>
+            </div>
+
+            <h4 class="w3-center">EDUCATION</h4>
+            <div class="w3-card w3-white w3-ul">
+                <li class="w3-row w3-animate-opacity" style="padding: 0; width:100%">
+                    <div class="w3-col l3 m4 s12 w3-display-container">
+                        <img src="photos/nd.jpg" style="width: 100%";>
+                        <div class="w3-display-topleft w3-hide-medium w3-hide-large w3-center" style="width:100%; height:100%; background-color: rgba(0,0,0,0.5);">
+                            <h2 class="w3-hide-medium w3-hide-large" style="color: white; width: 100%;">University of Notre Dame</h2>
+                            <p class="w3-hide-medium w3-hide-large" style="color: white; width: 100%;">(2019-)</p>
+                        </div>
+                    </div>
+                    <div class="w3-col l9 m8 s12 w3-display-container" style="position: relative;">
+                        <h3 class="w3-margin-left w3-hide-small">University of Notre Dame</h3>
+                        <p class="w3-margin-left w3-hide-small">(2019-)</p>
+                        <ul>
+                            <li style="padding:0; border-bottom: none;">Potential Majors: ACMS, Computer Science</li>
+                            <li style="padding:0; border-bottom: none;">Minor: AL/SC Honors Program</li>
+                        </ul>
+                    </div>
+                    <div class="w3-col l12 m12 s12 w3-pale-yellow" id="nd-detail">
+
+                    </div>
+                </li>
+
+                <li class="w3-row w3-animate-opacity" style="padding: 0; width:100%">
+                    <div class="w3-col l3 m4 s12 w3-display-container">
+                        <img src="photos/nhs2.jpg" style="width: 100%; height: 100%">
+                        <div class="w3-display-topleft w3-hide-medium w3-hide-large w3-center" style="width:100%; height:100%; background-color: rgba(0,0,0,0.5);">
+                            <h2 class="w3-hide-medium w3-hide-large" style="color: white;">Newtown High School</h2>
+                            <p class="w3-hide-medium w3-hide-large" style="color: white; width: 100%;">(2015-2019)</p>
+                        </div>
+                    </div>
+                    <div class="w3-col l9 m8 s12">
+                        <h3 class="w3-margin-left w3-hide-small">Newtown High School</h3>
+                        <p class="w3-margin-left w3-hide-small">(2015-2019)</p>
+                        <ul>
+                            <li style="padding:0; border-bottom: none;">Valedictorian of Graduating Class of ~400</li>
+                            <li style="padding:0; border-bottom: none;">National Merit Finalist</li>
+                        </ul>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="w3-black w3-opacity w3-container w3-center w3-padding-64">
+        <a href="#" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <p>&copy 2019 Bryan Ingwersen</p>
+    </footer>
+    
+    <script>
+
+        // Change style of navbar on scroll
+        window.onscroll = function() {myFunction()};
+        function myFunction() {
+            var navbar = document.getElementById("myNavbar");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+            } else {
+                navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+            }
+        }
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function toggleFunction(element) {
+            var x = document.getElementById(element);
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+        function switchFunction(element1, element2) {
+            toggleFunction(element1);
+            toggleFunction(element2);
+        }
+
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
