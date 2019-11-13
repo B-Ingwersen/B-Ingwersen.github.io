@@ -20,7 +20,7 @@
             background-position-y: center;
             background-repeat: no-repeat;
             background-size: cover;
-            height: 50%;
+            min-height: 50%;
         }
 
         /* First image (Logo. Full height) */
@@ -64,11 +64,11 @@
     </div>
 
     <div class="bgimg">
-        <div class="w3-padding-64 w3-container" style="position: inherit; width:100%; min-height:100%; background-color: rgba(100,100,100, 0.8)">
+        <div class="w3-padding-64 w3-container" style="position: relative; width:100%; min-height:100%; background-color: rgba(167, 167, 167, 0.9)">
             <div class="w3-content w3-container">
-                <h1 style="font-size: 3em; color: white;">Grapher 3D</h1>
+                <h1 style="font-size: 3em; color: black;">Discourse - Political Chat Web App</h1>
                 <div class="w3-row">
-                    <h3 style="color: white;">A basic graphic calculator than can display two and three-dimensional equations.</h3>
+                    <h3 style="color: black;">A hackathon project that pairs people of differing viewpoints and uses AI to encourage civil conversation</h3>
                 </div>
             </div>
         </div>
@@ -76,47 +76,40 @@
 
     <div class="w3-container w3-light-grey">
         <div class="w3-content">
-            <p>After using products like Desmos, I was interested trying to make my own graphing program, especially as my Multivariable Calculus class was annoyed by the lack of built in 3D graphing in Desmos. Obviously, this project is nowhere near as developed as the programs it was inspired by, but it has support for basic two-dimensional and three-dimensional graphs. Additionally, it is very responsive as it doesn't have the bloat of large computer algebra systems. The screenshots below show some of the fun graphs that the program can produce.
+            <p>
+                At the 2019 Irish Hacks Hackathon, I worked in a group of 3 to develop this web app. The concept is to provide a platform that encourages people on different sides of the political spectrum to engage in constructive discourse and bridge their idealogical differences. Users are prompted to fill out a brief questionnaire to identify their lean on various issues, and then a list of users with different opinions are suggested to them. The application looks for similar attributes and suggests them as a starting point, and then steers them toward areas of conversation where they have less agreement. In order to encourage civility, the program uses IBM Watson's Tone Analysis function to screen for inflammatory comments, and recomends that the user revise their message to use more civil language. In addition to the chat website, we developed a browser extension that applies the same message screening to input elements on any website. Therefore, users on other chat sites like social media platforms receive the same warning message for angry comments, and the extension suggests that they head to the Discourse site to continue their discussion.
             </p>
 
             <div class="w3-card w3-pale-green w3-margin-bottom">
-                <div class="w3-row">
-                    <div class="w3-col s12 m6 l6 w3-padding">
-                        <h3>Quick Information</h3>
-                        <ul>
-                            <li style="padding:0; border-bottom: none;">Language: C++</li>
-                            <li style="padding:0; border-bottom: none;">Backend: <a href="../graphic-lib/index.html">Graphics Library</a> Project</li>
-                            <li style="padding:0; border-bottom: none;">Project Size: ~2000 Source Lines of Code</li>
-                            <li style="padding:0; border-bottom: none;">Features: 2D and 3D Graphing, Points, Functions, Polar and Parametric Curves</li>
-                        </ul>
-                    </div>
-                    <div class="w3-col s12 m6 l6 w3-padding">
-                        <h3>View Source on GitHub:</h3>
-                        <a href="https://github.com/B-Ingwersen/Grapher3D">
-                            <div class="w3-card-4 w3-light-grey">
-                                <div class="w3-display-container w3-animate-opacity">
-                                    <img src="../../photos/githubLogo2.png" style="width: 100%;">
-                                    <div class="w3-display-middle w3-display-hover w3-animate-opacity" style="width: 100%; height: 100%;">
-                                        <div class="w3-light-grey" style="width:100%; height:100%; opacity:0.85;">
-                                            <div class="w3-btn w3-grey" style="width:100%; height:100%; font-size: 10em;">
-                                                ➔
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+                <div class="w3-row w3-padding">
+                    <h3>Quick Information</h3>
+                    <ul>
+                        <li style="padding:0; border-bottom: none;">Languages: HTML, CSS, JavaScript</li>
+                        <li style="padding:0; border-bottom: none;">Frameworks/Backends: IBM Watson, Google Firebase, Node Red</li>
+                        <li style="padding:0; border-bottom: none;">Won the IBM Watson Award at 2019 Irish Hacks for incorperation of AI</li>
+                    </ul>
                 </div>
             </div>
 
-            <h3>Screenshots:</h3>
+            <h3>Sample Photos:</h3>
             <div class="w3-row-padding w3-padding">
                 <div class="w3-col s12 m6 l6">
-                    <img src="photos/Example1.png" style="width:100%;">
+                    <img src="photos/example2.png" style="width:100%;">
+                    <h4>Questionnaire</h4>
                 </div>
                 <div class="w3-col s12 m6 l6">
-                    <img src="photos/Example2.png" style="width:100%;">
+                    <img src="photos/example3.png" style="width:100%;">
+                    <h4>Chat Feature</h4>
+                </div>
+            </div>
+            <div class="w3-row-padding w3-padding">
+                <div class="w3-col s12 m6 l6">
+                    <img src="photos/example4.png" style="width:100%;">
+                    <h4>Flagging Inflammatory Posts</h4>
+                </div>
+                <div class="w3-col s12 m6 l6">
+                    <img src="photos/example5.png" style="width:100%;">
+                    <h4>Browser Extension Example</h4>
                 </div>
             </div>
         </div>

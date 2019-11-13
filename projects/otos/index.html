@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body, html {
+            height: 100%;
+            color: #777;
+            line-height: 1.8;
+        }
+
+        /* Create a Parallax Effect */
+        .bgimg {
+            display: flex;
+            background-attachment: fixed;
+            background-position: center;
+            background-position-y: bottom;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 50%;
+        }
+
+        /* First image (Logo. Full height) */
+        .bgimg {
+            background-image: url('photos/background.png');
+        }
+
+        .w3-wide {letter-spacing: 10px;}
+        .w3-hover-opacity {cursor: pointer;}
+
+        /* Turn off parallax scrolling for tablets and phones */
+        @media only screen and (max-device-width: 1600px) {
+            .bgimg {
+                background-attachment: scroll;
+                min-height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar" id="myNavbar">
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+            <i class="fa fa-bars"></i>
+            </a>
+            <a href="../../index.html" class="w3-bar-item w3-button w3-hide-small" style="color: black">HOME</a>
+            <a href="../../about/index.html" class="w3-bar-item w3-button w3-hide-small" style="color: black"><i class="fa fa-user"></i> ABOUT</a>
+            <a href="../../projects/index.html" class="w3-bar-item w3-button w3-hide-small" style="color: black"><i class="fa fa-th"></i> PROJECTS</a>
+            <a href="../../contact/index.html" class="w3-bar-item w3-button w3-hide-small" style="color: black"><i class="fa fa-envelope"></i> CONTACT</a>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="mySidebar" class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-hide w3-hide-large w3-hide-medium">
+            <a href="../../index.html" class="w3-bar-item w3-button" onclick="toggleFunction()">HOME</a>
+            <a href="../../about/index.html" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+            <a href="../../projects/index.html" class="w3-bar-item w3-button" onclick="toggleFunction()">PROJECTS</a>
+            <a href="../../contact/index.html" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+        </div>
+    </div>
+
+    <div class="bgimg">
+        <div class="w3-padding-64 w3-container" style="position: relative; width:100%; min-height:100%; background-color: rgba(117, 117, 117, 0.9)">
+            <div class="w3-content w3-container">
+                <h1 style="font-size: 3em; color: white;">OTOS</h1>
+                <div class="w3-row">
+                    <h3 style="color: white;">A hobbyist microkernel and operating system</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-container w3-light-grey">
+        <div class="w3-content">
+
+            <p>OTOS (an acroynm for "Orange Tiger OS", a name which my former self unfortunately chose) is a small operating system I've worked on over the past few years. The project started out as a small curiosity that slowly grew into a larger hobby. Over time, the codebase has been rewritten over time as I experimented with various features and techniques. The main goal of OTOS has been to expose low-level interfaces to applications in a simple manner. As it uses a microkernel design, most of my recent work has been developing userspace utilities, and I'm getting close to creating an interactive userspace shell. While OTOS is unlikely to ever amount to much, it has been a fun and educational experience to working on it.</p>
+            <div class="w3-card w3-padding w3-pale-green w3-margin-bottom">
+                <h3>Quick Information</h3>
+                <ul>
+                    <li style="padding:0; border-bottom: none;">Languages: x86 Assembly (kernel) and C (userspace)</li>
+                    <li style="padding:0; border-bottom: none;">Project Size: ~12,000 Source Lines of Code</li>
+                    <li style="padding:0; border-bottom: none;">Notable Features: SMP support, Protected Mode, Small Kernel (&lt;12 kb), VESA graphics, PS/2 keyboard, BIOS disk access </li>
+                </ul>
+            </div>
+
+            <div class="w3-card w3-padding w3-white w3-margin-bottom">
+                <h3>Current Feature List</h3>
+                <ul>
+                    <li style="padding:0; border-bottom: none;">Protected Mode (32 bit)</li>
+                    <li style="padding:0; border-bottom: none;">Paging</li>
+                    <li style="padding:0; border-bottom: none;">Multi-Stage Chainloading Boot Process</li>
+                    <li style="padding:0; border-bottom: none;">Processes and Threads</li>
+                    <li style="padding:0; border-bottom: none;">Preemptive Multitasking</li>
+                    <li style="padding:0; border-bottom: none;">Round-Robin Scheduler</li>
+                    <li style="padding:0; border-bottom: none;">Memory Management System</li>
+                    <ul>
+                        <li style="padding:0; border-bottom: none;">Shared Memory</li>
+                        <li style="padding:0; border-bottom: none;">Kernel Protected Memory</li>
+                    </ul>
+                    <li style="padding:0; border-bottom: none;">Basic IPC primitives</li>
+                    <li style="padding:0; border-bottom: none;">SMP and Synchronization</li>
+                    <li style="padding:0; border-bottom: none;">BIOS Functionality</li>
+                    <ul>
+                        <li style="padding:0; border-bottom: none;">System for safely calling BIOS functions from protected mode</li>
+                        <li style="padding:0; border-bottom: none;">VESA Extensions</li>
+                        <li style="padding:0; border-bottom: none;">Disk Loading</li>
+                    </ul>
+                    <li style="padding:0; border-bottom: none;">Runs from FAT32 filesystem</li>
+                    <li style="padding:0; border-bottom: none;">Userspace Resource Managers and Drivers</li>
+                    <ul>
+                        <li style="padding:0; border-bottom: none;">Program Loader</li>
+                        <li style="padding:0; border-bottom: none;">Disk/Filesystem Manager</li>
+                        <li style="padding:0; border-bottom: none;">PS/2 Keyboard Driver</li>
+                        <li style="padding:0; border-bottom: none;">Video Driver</li>
+                    </ul>
+                </ul>
+            </div>
+
+            <div class="w3-card w3-padding w3-white w3-margin-bottom">
+            <h3>
+                Version History
+            </h3>
+            <p>
+                OTOS has been through a number of major rewrites and revisions as I learned more about operating systems and realized psat mistakes. The following outlines the project's progression:
+            </p>
+            <div class="w3-padding">
+                <h4>Versions 0.0.X</h4>
+                <p>These versions represent my very first steps learning about operating systems. Many are experimentations with material from tutorials or BIOS functions.</p>
+                <h4>Version 0.1</h4>
+                <p>This version included the project's first larger changes, moving to protected mode and loading and executing a kernel. It's actual functionality was printing out the tiger face welcome screen and allowing the user to type at will with the keyboard. These were made possible with the addition of PS/2 and basic video drivers, although everything was run from kernel space.
+                </p>
+                <h4>Version 0.1.1</h4>
+                <p>
+                    In order to expand the basic functionality of OTOS 0.1, I worked on moving to userspace and including protections. Basic memory management with paging was introduced, and a process and thread infastructure with a preemptive scheduler was created. As these new features allowed userspace programs to exist, OTOS 0.1.1 began booting from OTFS, a primitive (and since discarded) file system.
+                </p>
+                <h4>Current Version (0.2.0)</h4>
+                    While OTOS 0.1.1 had a lot of features, some poor design decisions and lack of synchronization primitives made the system unstable, and bugs were becoming unmanageable as the project grew. Therefore, I began a full rewrite of the 6000 line assembly kernel. The new architecture built on previous designs while addressing their problems. This allowed for the addition of multiprocessor support and a stable userspace with a well defined implemented group of system calls including basic IPC functionality. The boot process was revamped, and I added more generic file system support (with FAT32 currently implemented) to ease file management and testing on real hardware. Recently, the project got a basic interactive shell.
+            </div>
+            </div>
+            <h3>Screenshots:</h3>
+            <div class="w3-row-padding w3-padding">
+                <div class="w3-col s12 m6 l6">
+                    <img src="photos/example1.png" style="width:100%;">
+                </div>
+                <div class="w3-col s12 m6 l6">
+                    <img src="photos/example2.png" style="width:100%;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="w3-black w3-opacity w3-container w3-center w3-padding-64">
+        <a href="#" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <p>&copy 2019 Bryan Ingwersen</p>
+    </footer>
+    
+    <script>
+
+        // Change style of navbar on scroll
+        window.onscroll = function() {myFunction()};
+        function myFunction() {
+            var navbar = document.getElementById("myNavbar");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+            } else {
+                navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+            }
+        }
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function toggleFunction() {
+            var x = document.getElementById("mySidebar");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>

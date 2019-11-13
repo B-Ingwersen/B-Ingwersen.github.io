@@ -79,28 +79,37 @@
             <p>
                 I was working on a hobbyist operating system project and I wanted to move it to booting from a file system in order to ease testing on real hardware easier. This project contains two bootloaders that I made for easily testing that setup. It is limited to loading from a FAT32 partition on a MBR disk, but I found that its simplicity helps for starting out with a hobby OS project. The two bootloaders work to chainload a file with a designated name and fit into the first sector of the disk and the partition respectively instead of requiring their own partition.
             </p>
-            <h3>View Source on GitHub:</h3>
-            <div class="w3-row">
-                <div class="w3-col s0 m3 l3">
-                    &nbsp;
-                </div>
-                <div class="w3-col s12 m6 l6 w3-container">
-                    <a href="https://github.com/B-Ingwersen/MBR-Bootloaders">
-                        <div class="w3-card-4 w3-light-grey">
-                            <div class="w3-display-container w3-animate-opacity">
-                                <img src="../../photos/githubLogo2.png" style="width: 100%;">
-                                <div class="w3-display-middle w3-display-hover w3-animate-opacity" style="width: 100%; height: 100%;">
-                                    <div class="w3-light-grey" style="width:100%; height:100%; opacity:0.85;">
-                                        <div class="w3-btn w3-grey" style="width:100%; height:100%; font-size: 10em;">
-                                            ➔
+
+            <div class="w3-card w3-pale-green w3-margin-bottom">
+                <div class="w3-row">
+                    <div class="w3-col s12 m6 l6 w3-padding">
+                        <h3>Quick Information</h3>
+                        <ul>
+                            <li style="padding:0; border-bottom: none;">Language: x86 Assembly</li>
+                            <li style="padding:0; border-bottom: none;">Project Size: ~450 Source Lines of Code</li>
+                            <li style="padding:0; border-bottom: none;">Features: 2 Stage Chain-Loading, Reads Boot File off FAT32 disk</li>
+                        </ul>
+                    </div>
+                    <div class="w3-col s12 m6 l6 w3-padding">
+                        <h3>View Source on GitHub:</h3>
+                        <a href="https://github.com/B-Ingwersen/MBR-Bootloaders">
+                            <div class="w3-card-4 w3-light-grey">
+                                <div class="w3-display-container w3-animate-opacity">
+                                    <img src="../../photos/githubLogo2.png" style="width: 100%;">
+                                    <div class="w3-display-middle w3-display-hover w3-animate-opacity" style="width: 100%; height: 100%;">
+                                        <div class="w3-light-grey" style="width:100%; height:100%; opacity:0.85;">
+                                            <div class="w3-btn w3-grey" style="width:100%; height:100%; font-size: 10em;">
+                                                ➔
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
             </div>
+
             <h3>Sample Photos:</h3>
             <div class="w3-row-padding w3-padding">
                 <div class="w3-col s12 m6 l6">
