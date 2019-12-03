@@ -109,6 +109,27 @@
                 </div>
             </div>
 
+            <div class="w3-card w3-padding w3-white w3-margin-bottom">
+                <h3>Overview</h3>
+                <p>
+                    The website started with the creation of the match recording capability. Each practice recorded by the system is saved in a database, and the data analysis components pull data down and present useful statistics to the team.
+                </p>
+                <h3>Match Recording</h3>
+                <p>
+                    A user-friendly interface was created to make it easy for any team member to record practice data in real time. It records which player answered the question, whether they got it correct, and whether they interrupted the reading or not. The system follows the Nation Science Bowl rules to automatically skip certain questions (although I later implemented a "fun mode" as well which includes all questions). Additionally, I added the capability to import data from the PDFs with practice questions we use, allowing us to record the question's topic (math, biology, physics, etc.) with the other data. At the request of other team members, the website also integrates with Google Sheets APIs which allows a copy of the round data put in the database to be automatically made into a spreadsheet.
+                </p>
+                <h3>
+                    Data Analysis
+                </h3>
+                <p>
+                    The main purpose of the website, understanding strengths and weaknesses, is conducted through the data analyzer page. This allows match performance data to be collected for the entire team or for an individual player. In an addition to overall performance, people can see their accuracy broken down by question topics and a detail of all the questions they've answered. Upon request, I also added a leaderboard feature which allowed us to compare player performance in different areas.
+                </p>
+                <h3>User Accounts</h3>
+                <p>
+                    Out of curiosity, I decided to build my own user management system rather than using a pre-built solution. Although admittedly naive, it was definately an educational experience. Only hashed and modified versions of passwords are stored on the server, and a session id system is used to validate additional requests after a user logs in. Certain pages that allow for managing stored data are set up to require administrator privilages as well.
+                </p>
+            </div>
+
             <h3>Screenshots:</h3>
             <div class="w3-row-padding w3-padding">
                 <div class="w3-col s12 m6 l6">

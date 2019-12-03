@@ -76,7 +76,7 @@
 
     <div class="w3-container w3-light-grey">
         <div class="w3-content">
-            <p>This hobby project started as a curiosity to see what 3D rendering I could do with my basic knowledge of geometry and physics. The program has a few basic object types built in that can be rendered, but there is an interface for adding your own custom 3D objects. Recently, I reorganized the code and made the math a lot more elogant as I knew very little linear algebra when I began writing it.
+            <p>This hobby project started as a curiosity to see what 3D rendering I could do with my basic knowledge of geometry and physics. The program has a few basic object types built in that can be rendered, but there is an interface for adding your own custom 3D objects. Recently, I worked on cleaning up parts of the code to clarify the underlying linear algebra.
             
             <div class="w3-card w3-pale-green w3-margin-bottom">
                 <div class="w3-row">
@@ -85,7 +85,7 @@
                         <ul>
                             <li style="padding:0; border-bottom: none;">Language: C++</li>
                             <li style="padding:0; border-bottom: none;">Project Size: ~1,000 Source Lines of Code</li>
-                            <li style="padding:0; border-bottom: none;">Features: No Reflection Limit, Tiled Floor Object, Optical Lens Simulation and Depth of Field</li>
+                            <li style="padding:0; border-bottom: none;">Features: No Reflection Limit, Multi-threaded, Optical Lens Simulation and Depth of Field</li>
                         </ul>
                     </div>
                     <div class="w3-col s12 m6 l6 w3-padding">
@@ -106,6 +106,29 @@
                         </a>
                     </div>
                 </div>
+            </div>
+
+            <div class="w3-card w3-padding w3-white w3-margin-bottom">
+                <h3>Overview</h3>
+                <p>
+                    The program simulates the path of rays of light entering a camera, and recursive traces them back to light sources by calculating their collisions and reflections with objects in the scene. Unlike normal rasterization where objects are converted into triangular meshes, each object is given an exact mathematical description from which intersections are found. As a natural result or simulating light, accurate shadows are produced as well. The number of simulated reflections can be increased freely, and there is not a substantial memory penalty in doing so, although the computational time will scale linearly. 
+                </p>
+                <h3>Object Types</h3>
+                <p>
+                    Currently the rendered scenes are relatively basic as only three different objects are built in: spheres, planes, and a special tiled-floor object. With each of these, basic qualities can be adjusted such as their size, position, color, and reflectivity. I hope to add more in the future, although the focus of this project was primarily about applying mathematics and designing the rendering architecture. The project is also set up to easily allow others to add custom scene objects by implementing a set of methods.
+                </p>
+                <h3>Depth of Field Simulation</h3>
+                <p>
+                    A more recent feature allows depth of field to be simulated. The program creates a virtual camera lens, and then each pixel is calculated by sending multiple rays out from the corresponding location on a virtual sensor into the lens. As shown in the images below, the focal distance can be adjusted in order to bring attention to different objects. Although the technique increases the realism of the resulting images, it also adds a significant performance penalty.
+                </p>
+                <h3>Rendering Design</h3>
+                <p>
+                    As performance is a big issue with ray tracing, I reworked the rendering design to allow for multithreading. Now, a rendering job object is created which stores all of the scene data as well as the information about the lighting, output image, and ray tracing paramaters. This object can be passed to multiple worker threads which process different groups of pixels simultaneously.
+                </p>
+                <p>
+                    Currently, the project uses SDL2 as a backend for displaying the buffered image in a graphical window, although it could be modified to use other frameworks relatively easily.
+                </p>
+
             </div>
             
             <h3>Sample Photos:</h3>
