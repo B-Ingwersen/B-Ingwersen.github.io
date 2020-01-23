@@ -77,11 +77,11 @@
     <div class="w3-container w3-light-grey">
         <div class="w3-content">
 
-            <p>OTOS (an acroynm for "Orange Tiger OS", a name which my former self unfortunately chose) is a small operating system I've worked on over the past few years. The project started out as a small curiosity that slowly grew into a larger hobby. Over time, the codebase has been rewritten over time as I experimented with various features and techniques. The main goal of OTOS has been to expose low-level interfaces to applications in a simple manner. As it uses a microkernel design, most of my recent work has been developing userspace utilities, and I'm getting close to creating an interactive userspace shell. While OTOS is unlikely to ever amount to much, it has been a fun and educational experience to working on it.</p>
+            <p>OTOS (an acronym for "Orange Tiger OS", a name which my former self unfortunately chose) is a small operating system I've worked on over the past few years. The project started out as a small curiosity that slowly grew into a larger hobby. Over time, the codebase has been rewritten over time as I experimented with various features and techniques. The main goal of OTOS has been to expose low-level interfaces to applications in a simple manner. As it uses a microkernel design, most of my recent work has been developing user space utilities, and I'm getting close to creating an interactive user space shell. While OTOS is unlikely to ever amount to much, it has been a fun and educational experience to working on it.</</p>
             <div class="w3-card w3-padding w3-pale-green w3-margin-bottom">
                 <h3>Quick Information</h3>
                 <ul>
-                    <li style="padding:0; border-bottom: none;">Languages: x86 Assembly (kernel) and C (userspace)</li>
+                    <li style="padding:0; border-bottom: none;">Languages: x86 Assembly (kernel) and C (user space)</li>
                     <li style="padding:0; border-bottom: none;">Project Size: ~12,000 Source Lines of Code</li>
                     <li style="padding:0; border-bottom: none;">Notable Features: SMP support, Protected Mode, Small Kernel (&lt;12 kb), VESA graphics, PS/2 keyboard, BIOS disk access </li>
                 </ul>
@@ -92,7 +92,7 @@
                 <ul>
                     <li style="padding:0; border-bottom: none;">Protected Mode (32 bit)</li>
                     <li style="padding:0; border-bottom: none;">Paging</li>
-                    <li style="padding:0; border-bottom: none;">Multi-Stage Chainloading Boot Process</li>
+                    <li style="padding:0; border-bottom: none;">Multi-Stage Chain Loading Boot Process</li>
                     <li style="padding:0; border-bottom: none;">Processes and Threads</li>
                     <li style="padding:0; border-bottom: none;">Preemptive Multitasking</li>
                     <li style="padding:0; border-bottom: none;">Round-Robin Scheduler</li>
@@ -110,7 +110,7 @@
                         <li style="padding:0; border-bottom: none;">Disk Loading</li>
                     </ul>
                     <li style="padding:0; border-bottom: none;">Runs from FAT32 filesystem</li>
-                    <li style="padding:0; border-bottom: none;">Userspace Resource Managers and Drivers</li>
+                    <li style="padding:0; border-bottom: none;">User space Resource Managers and Drivers</li>
                     <ul>
                         <li style="padding:0; border-bottom: none;">Program Loader</li>
                         <li style="padding:0; border-bottom: none;">Disk/Filesystem Manager</li>
@@ -125,7 +125,7 @@
                 Version History
             </h3>
             <p>
-                OTOS has been through a number of major rewrites and revisions as I learned more about operating systems and realized psat mistakes. The following outlines the project's progression:
+                OTOS has been through a few major rewrites and revisions as I learned more about operating systems and realized past mistakes. The following outlines the project's progression:
             </p>
             <div class="w3-padding">
                 <h4>Versions 0.0.X</h4>
@@ -135,10 +135,10 @@
                 </p>
                 <h4>Version 0.1.1</h4>
                 <p>
-                    In order to expand the basic functionality of OTOS 0.1, I worked on moving to userspace and including protections. Basic memory management with paging was introduced, and a process and thread infastructure with a preemptive scheduler was created. As these new features allowed userspace programs to exist, OTOS 0.1.1 began booting from OTFS, a primitive (and since discarded) file system.
+                    In order to expand the basic functionality of OTOS 0.1, I worked on moving to user space and including protections. Basic memory management with paging was introduced, and a process and thread infrastructure with a preemptive scheduler was created. As these new features allowed user space programs to exist, OTOS 0.1.1 began booting from OTFS, a primitive (and since discarded) file system.
                 </p>
                 <h4>Current Version (0.1.2)</h4>
-                    While OTOS 0.1.1 had a lot of features, some poor design decisions and lack of synchronization primitives made the system unstable, and bugs were becoming unmanageable as the project grew. Therefore, I began a full rewrite of the 6000 line assembly kernel. The new architecture built on previous designs while addressing their problems. This allowed for the addition of multiprocessor support and a stable userspace with a well defined implemented group of system calls including basic IPC functionality. The boot process was revamped, and I added more generic file system support (with FAT32 currently implemented) to ease file management and testing on real hardware. Recently, the project got a basic interactive shell.
+                While OTOS 0.1.1 had a lot of features, some poor design decisions and lack of synchronization primitives made the system unstable, and bugs were becoming unmanageable as the project grew. Therefore, I began a full rewrite of the 6000-line assembly kernel. The new architecture built on previous designs while addressing their problems. This allowed for the addition of multiprocessor support and a stable user space with a well-defined implemented group of system calls including basic IPC functionality. The boot process was revamped, and I added more generic file system support (with FAT32 currently implemented) to ease file management and testing on real hardware. Recently, the project got a basic interactive shell.
             </div>
             </div>
             <h3>Screenshots:</h3>

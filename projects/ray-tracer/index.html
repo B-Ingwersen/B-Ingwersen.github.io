@@ -123,7 +123,7 @@
                 </p>
                 <h3>Rendering Design</h3>
                 <p>
-                    As performance is a big issue with ray tracing, I reworked the rendering design to allow for multithreading. Now, a rendering job object is created which stores all of the scene data as well as the information about the lighting, output image, and ray tracing paramaters. This object can be passed to multiple worker threads which process different groups of pixels simultaneously.
+                    As performance is a big issue with ray tracing, I reworked the rendering design to allow for multithreading. Now, a rendering job object is created which stores all the scene data as well as the information about the lighting, output image, and ray tracing parameters. This object can be passed to multiple worker threads which process different groups of pixels simultaneously.
                 </p>
                 <p>
                     Currently, the project uses SDL2 as a backend for displaying the buffered image in a graphical window, although it could be modified to use other frameworks relatively easily.
