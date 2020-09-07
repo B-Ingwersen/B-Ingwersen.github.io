@@ -17,6 +17,7 @@
             display: flex;
             background-attachment: fixed;
             background-position: center;
+            background-position-y: center;
             background-repeat: no-repeat;
             background-size: cover;
             min-height: 50%;
@@ -47,10 +48,10 @@
             <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
             <i class="fa fa-bars"></i>
             </a>
-            <a href="../../index.html" class="w3-bar-item w3-button w3-hide-small" style="color: grey">HOME</a>
-            <a href="../../about/index.html" class="w3-bar-item w3-button w3-hide-small" style="color: grey"><i class="fa fa-user"></i> ABOUT</a>
-            <a href="../../projects/index.html" class="w3-bar-item w3-button w3-hide-small" style="color: grey"><i class="fa fa-th"></i> PROJECTS</a>
-            <a href="../../contact/index.html" class="w3-bar-item w3-button w3-hide-small" style="color: grey"><i class="fa fa-envelope"></i> CONTACT</a>
+            <a href="../../index.html" class="w3-bar-item w3-button w3-hide-small" style="color: black">HOME</a>
+            <a href="../../about/index.html" class="w3-bar-item w3-button w3-hide-small" style="color: black"><i class="fa fa-user"></i> ABOUT</a>
+            <a href="../../projects/index.html" class="w3-bar-item w3-button w3-hide-small" style="color: black"><i class="fa fa-th"></i> PROJECTS</a>
+            <a href="../../contact/index.html" class="w3-bar-item w3-button w3-hide-small" style="color: black"><i class="fa fa-envelope"></i> CONTACT</a>
         </div>
 
         <!-- Navbar on small screens -->
@@ -62,12 +63,12 @@
         </div>
     </div>
 
-    <div class="bgimg">
-        <div class="w3-padding-64 w3-container" style="position: relative; width:100%; min-height:100%; background-color: rgba(0,0,0, 0.9)">
+    <div class="bgimg w3-animate-opacity">
+        <div class="w3-padding-64 w3-container" style="position: relative; width:100%; min-height:100%; background-color: rgba(0,0,0, 0.5)">
             <div class="w3-content w3-container">
-                <h1 style="font-size: 3em; color: white;">Science Bowl Data Logger</h1>
+                <h1 style="font-size: 3em; color: white;">Deckless</h1>
                 <div class="w3-row">
-                    <h3 style="color: white;">A website developed for a high school science bowl team that allows tracking of team and individual performance.</h3>
+                    <h3 style="color: white;">Web-based multiplayer card games built with Firebase as a backend</h3>
                 </div>
             </div>
         </div>
@@ -75,23 +76,21 @@
 
     <div class="w3-container w3-light-grey">
         <div class="w3-content">
-            <p>
-                This project was developed for my high school science bowl team. To prepare for our regional tournament, we wanted a way to track which categories we needed to work on. Therefore, I developed and maintained this website which allowed us to record our practices and analyze our performance. It can provide category breakdown for individuals and the team as a whole, and it integrates official science bowl question sets and Google Sheets APIs. After graduating, I passed on the responsibility of maintaining the site, but it is still in use by the team.
-            </p>
-
+            <p>This project was inspired by the times friends and I realized we didn't have a deck of cards, or when we were trying to play during a bumpy bus ride in the dark. This aims to provide a simple, web based way to play virtual card games with friends that doesn't include any sign on and offers a decent UI. The project is a work in progress, but you can check out its current state at <a href="https://deckless.web.app">deckless.web.app</a></p>
+            
             <div class="w3-card w3-pale-green w3-margin-bottom">
                 <div class="w3-row">
                     <div class="w3-col s12 m6 l6 w3-padding">
                         <h3>Quick Information</h3>
                         <ul>
-                            <li style="padding:0; border-bottom: none;">Languages (frontend): HTML, CSS, JavaScript</li>
-                            <li style="padding:0; border-bottom: none;">Languages (backend): PHP, SQL</li>
-                            <li style="padding:0; border-bottom: none;">Project Size: ~4,500 Source Lines of Code</li>
+                            <li style="padding:0; border-bottom: none;">Language/Framework: HTML/Javascript, Node.js and Firebase Realtime Database</li>
+                            <li style="padding:0; border-bottom: none;">Project Size: ~2,000 Source Lines of Code</li>
+                            <li style="padding:0; border-bottom: none;">Features: Frameworks for local and multiplayer games</li>
                         </ul>
                     </div>
                     <div class="w3-col s12 m6 l6 w3-padding">
                         <h3>View Source on GitHub:</h3>
-                        <a href="https://github.com/B-Ingwersen/ScienceBowlDataLogger">
+                        <a href="https://github.com/B-Ingwersen/Deckless">
                             <div class="w3-card-4 w3-light-grey">
                                 <div class="w3-display-container w3-animate-opacity">
                                     <img src="../../photos/githubLogo2.png" style="width: 100%;">
@@ -112,45 +111,31 @@
             <div class="w3-card w3-padding w3-white w3-margin-bottom">
                 <h3>Overview</h3>
                 <p>
-                    The website started with the creation of the match recording capability. Each practice recorded by the system is saved in a database, and the data analysis components pull data down and present useful statistics to the team.
+                    Most of the functionality is implemented in the browser, with the backend existing only for facilitating the multiplayer experience. The information passing system is separated out from the visual and game mechanics components, so multiplayer and local games are supported with the same base code. The multiplayer experience is modeled off of sites like Kahoot that use codes for easily creating and joining games.
                 </p>
-                <h3>Match Recording</h3>
-                <p>
-                    A user-friendly interface was created to make it easy for any team member to record practice data in real time. It records which player answered the question, whether they got it correct, and whether they interrupted the reading or not. The system follows the Nation Science Bowl rules to automatically skip certain questions (although I later implemented a "fun mode" as well which includes all questions). Additionally, I added the capability to import data from the PDFs with practice questions we use, allowing us to record the question's topic (math, biology, physics, etc.) with the other data. At the request of other team members, the website also integrates with Google Sheets APIs which allows a copy of the round data put in the database to be automatically made into a spreadsheet.
-                </p>
-                <h3>
-                    Data Analysis
-                </h3>
-                <p>
-                    The main purpose of the website, understanding strengths and weaknesses, is conducted through the data analyzer page. This allows match performance data to be collected for the entire team or for an individual player. In an addition to overall performance, people can see their accuracy broken down by question topics and a detail of all the questions they've answered. Upon request, I also added a leaderboard feature which allowed us to compare player performance in different areas.
-                </p>
-                <h3>User Accounts</h3>
-                <p>
-                    Out of curiosity, I decided to build my own user management system rather than using a pre-built solution. Although admittedly naive, it was an educational experience. Only hashed and modified versions of passwords are stored on the server, and a session id system is used to validate additional requests after a user logs in. Certain pages that allow for managing stored data are set up to require administrator privileges as well.
-                </p>
-            </div>
 
-            <h3>Screenshots:</h3>
-            <div class="w3-row-padding w3-padding">
-                <div class="w3-col s12 m6 l6">
-                    <img src="photos/example1.png" style="width:100%;">
-                    <h4>Match Recording</h4>
-                </div>
-                <div class="w3-col s12 m6 l6">
-                    <img src="photos/example2.png" style="width:100%;">
-                    <h4>Data Analysis</h4>
-                </div>
+                <h3>Game Mechanics</h3>
+                <p>
+                    A series of generic game classes are used to store state information about the game (what cards are in which stack, who's turn it is, etc). The game play is driven by processing objects that contain information about each move a player makes. Each distinct game is essentially a move interpreter that defines how to change the game state based on the move information.
+                </p>
+
+                <h3>Game UI</h3>
+                <p>
+                    Most of the graphics are created with Javascript canvases. The visuals are actually split between two canvases, the background one for mostly static elements and the foreground one for elements being animated. The cards are all drawn though basic canvas features (paths, rectangles, text, etc.) meaning there are very few visual resources to load. UI elements like the visual card stacks are linked to the game state information so that actions such as moving a card from one pile to another are represented on screen.
+                </p>
+
+                <h3>Multiplayer</h3>
+                <p>
+                    Information about each multiplayer game is transmitted it by storing it in a Firebase realtime database. This allows the system to find what game to join when the user provides a game code. When the game is actually being played, each player's moves are added as database entries, and each client puts a listener on that database location so that the moves get passed around to everyone.
+                </p>
+
+                <h3>Local Games</h3>
+                <p>
+                    The same base framework is used for local games, but moves are passed straight from where they are generated to what should handle them. Each game can implement a function describing how a computer player should respond to game events.
+                </p>
+
             </div>
-            <div class="w3-row-padding w3-padding">
-                <div class="w3-col s12 m6 l6">
-                    <img src="photos/example3.png" style="width:100%;">
-                    <h4>Login</h4>
-                </div>
-                <div class="w3-col s12 m6 l6">
-                    <img src="photos/example4.png" style="width:100%;">
-                    <h4>Account Management</h4>
-                </div>
-            </div>
+            
         </div>
     </div>
 
