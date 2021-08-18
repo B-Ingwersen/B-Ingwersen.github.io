@@ -79,12 +79,33 @@
 
             <p>OTOS (an acronym for "Orange Tiger OS", a name which my former self unfortunately chose) is a small operating system I've worked on over the past few years. The project started out as a small curiosity that slowly grew into a larger hobby. Over time, the codebase has been rewritten over time as I experimented with various features and techniques. The main goal of OTOS has been to expose low-level interfaces to applications in a simple manner. As it uses a microkernel design, most of my recent work has been developing user space utilities, and I'm getting close to creating an interactive user space shell. While OTOS is unlikely to ever amount to much, it has been a fun and educational experience to working on it.</</p>
             <div class="w3-card w3-padding w3-pale-green w3-margin-bottom">
-                <h3>Quick Information</h3>
-                <ul>
-                    <li style="padding:0; border-bottom: none;">Languages: x86 Assembly (kernel) and C (user space)</li>
-                    <li style="padding:0; border-bottom: none;">Project Size: ~12,000 Source Lines of Code</li>
-                    <li style="padding:0; border-bottom: none;">Notable Features: SMP support, Protected Mode, Small Kernel (&lt;12 kb), VESA graphics, PS/2 keyboard, BIOS disk access </li>
-                </ul>
+                <div class="w3-row">
+                    <div class="w3-col s12 m6 l6 w3-padding">
+                        <h3>Quick Information</h3>
+                        <ul>
+                            <li style="padding:0; border-bottom: none;">Languages: x86 Assembly (kernel) and C (user space)</li>
+                            <li style="padding:0; border-bottom: none;">Project Size: ~12,000 Source Lines of Code</li>
+                            <li style="padding:0; border-bottom: none;">Notable Features: SMP support, Protected Mode, Small Kernel (&lt;12 kb), VESA graphics, PS/2 keyboard, BIOS disk access </li>
+                        </ul>
+                    </div>
+                    <div class="w3-col s12 m6 l6 w3-padding">
+                        <h3>View Source on GitHub:</h3>
+                        <a href="https://github.com/B-Ingwersen/OTOS">
+                            <div class="w3-card-4 w3-light-grey">
+                                <div class="w3-display-container w3-animate-opacity">
+                                    <img src="../../photos/githubLogo2.png" style="width: 100%;">
+                                    <div class="w3-display-middle w3-display-hover w3-animate-opacity" style="width: 100%; height: 100%;">
+                                        <div class="w3-light-grey" style="width:100%; height:100%; opacity:0.85;">
+                                            <div class="w3-btn w3-grey" style="width:100%; height:100%; font-size: 10em;">
+                                                ➔
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
 
             <div class="w3-card w3-padding w3-white w3-margin-bottom">
@@ -137,8 +158,8 @@
                 <p>
                     In order to expand the basic functionality of OTOS 0.1, I worked on moving to user space and including protections. Basic memory management with paging was introduced, and a process and thread infrastructure with a preemptive scheduler was created. As these new features allowed user space programs to exist, OTOS 0.1.1 began booting from OTFS, a primitive (and since discarded) file system.
                 </p>
-                <h4>Current Version (0.1.2)</h4>
-                While OTOS 0.1.1 had a lot of features, some poor design decisions and lack of synchronization primitives made the system unstable, and bugs were becoming unmanageable as the project grew. Therefore, I began a full rewrite of the 6000-line assembly kernel. The new architecture built on previous designs while addressing their problems. This allowed for the addition of multiprocessor support and a stable user space with a well-defined implemented group of system calls including basic IPC functionality. The boot process was revamped, and I added more generic file system support (with FAT32 currently implemented) to ease file management and testing on real hardware. Recently, the project got a basic interactive shell.
+                <h4>Current Versions (0.1.2 - 0.2.0)</h4>
+                While OTOS 0.1.1 had a lot of features, some poor design decisions and lack of synchronization primitives made the system unstable, and bugs were becoming unmanageable as the project grew. Therefore, I began a full rewrite of the 6000-line assembly kernel. The new architecture built on previous designs while addressing their problems. This allowed for the addition of multiprocessor support and a stable user space with a well-defined implemented group of system calls including basic IPC functionality. The boot process was revamped, and I added more generic file system support (with read only FAT32 currently implemented) to ease file management and testing on real hardware. The version includes a basic interactive shell with a few barebone commands for exploring the file system and the ability to test out different video modes.
             </div>
             </div>
             <h3>Screenshots:</h3>
@@ -177,7 +198,7 @@
 
     <footer class="w3-black w3-opacity w3-container w3-center w3-padding-64">
         <a href="#" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-        <p>&copy 2019 Bryan Ingwersen</p>
+        <p>&copy 2021 Bryan Ingwersen</p>
     </footer>
     
     <script>
